@@ -1,9 +1,10 @@
 from math import inf
+from typing import Union
 import errors
 
 # Exercice 3
 
-def min_liste(liste):
+def min_liste(liste: list) -> list:
     """
     Description: Renvoie la valeur minimale d'une liste.
     Entrée: liste (list) liste avec les nombres.
@@ -48,7 +49,7 @@ def min_liste(liste):
 
 # Exercice 4
 
-def saisir_entier(message="Saisir un entier: ", a=-inf, b=inf):
+def saisir_entier(message: str="Saisir un entier: ", a: Union[int, float]=-inf, b: Union[int, float]=inf):
     """
     Description: Renvoie l'entier saisi (oui c'est claqué).
     Entrées: message (str) =  "Saisir un entier: " message de l'input de l'entier.
