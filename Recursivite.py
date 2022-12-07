@@ -16,8 +16,20 @@ def somme(liste: list) -> int:
     except ValueError:
         print("La liste doit être composé exclusivement d'entiers.")
 
+def max(a: int, b: int) -> int:
+    if a > b:
+        return a
+    elif b > a:
+        return b
+    else:
+        return a
+
+
 def fact_it(n: int) -> int:
     try:
+        if type(n) != int:
+            raise TypeError
+
         if n < 0:
             raise ValueError
         
@@ -33,7 +45,23 @@ def fact_it(n: int) -> int:
     except TypeError:
         print("Le paramètre doit être un entier positif")
     except ValueError:
-        print("L'entier fournit doit être positif")
+        print("L'entier fournit doit être positif")    
 
+def fact_rec(n: int) -> int:
+    try:
+        if type(n) != int:
+            raise TypeError
+        
+        if n < 0:
+            raise ValueError
+        elif n == 0:
+            return 1
+        else:
+            return n * fact_rec(n-1)
     
-
+    except TypeError:
+        print("Le paramètre doit être un entier positif")
+        return None
+    except ValueError:
+        print("L'entier fournit doit être positif")
+        return None
